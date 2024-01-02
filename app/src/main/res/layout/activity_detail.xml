@@ -22,13 +22,20 @@
                 android:layout_marginBottom="20dp"
                 android:importantForAccessibility="no"
                 android:scaleType="fitXY" />
+
             <TextView
                 android:id="@+id/titleDetailTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/informationDetailTextView"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp"
+                android:textStyle="normal"/>
             <TextView
                 android:id="@+id/overviewDetailTextView"
                 android:layout_width="match_parent"

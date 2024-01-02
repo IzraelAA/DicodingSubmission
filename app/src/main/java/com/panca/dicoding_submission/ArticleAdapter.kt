@@ -4,6 +4,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.panca.dicoding_submission.Article
 import com.panca.dicoding_submission.ItemClickListener
 import com.panca.dicoding_submission.R
 
