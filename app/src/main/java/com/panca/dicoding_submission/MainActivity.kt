@@ -1,7 +1,6 @@
 package com.panca.dicoding_submission
 
 import ArticleAdapter
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -10,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), ItemClickListener {
 
@@ -56,11 +56,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
     }
 
     // Fungsi untuk menyediakan data contoh
-    @SuppressLint("SimpleDateFormat")
     private fun getSampleArticles(): List<Article> {
         val articles = mutableListOf<Article>()
 
-        val dateFormat = SimpleDateFormat("MMM dd, yyyy")
+        val dateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH)
 
         articles.add(
             Article(

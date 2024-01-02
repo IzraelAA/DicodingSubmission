@@ -6,10 +6,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
+import java.util.Locale
 
 class DetailActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId", "SimpleDateFormat", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -24,7 +24,8 @@ class DetailActivity : AppCompatActivity() {
         overviewTextView.text = article.overview
         imageDetail.setImageResource(article.image)
 
-        val dateFormat = SimpleDateFormat("MMM dd, yyyy")
-        informationDetailTextView.text = "Diposting pada ${dateFormat.format(article.date)} oleh ${article.author}"
+        val dateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH)
+        informationDetailTextView.text =
+            getString(R.string.information_detail, dateFormat.format(article.date), article.author)
     }
 }
